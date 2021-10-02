@@ -13,6 +13,7 @@ require("dotenv").config();
 const Home=require("./Routes/Home")
 const CreateUserFormData=require("./Routes/CreateUserFormData");
 const CoreUser = require("./Routes/CoreUser");
+const CreateNewCoreTeam = require("./Routes/CreateNewCoreTeam");
 
 /*==========================================</Routes>======================================================== */
 
@@ -43,7 +44,7 @@ mongoose.connect(process.env.DB, {
 app.get("/", Home);
 app.post("/createuser", CreateUserFormData);
 app.get("/coreuser", CoreUser)
-
+app.post("/createnewcoreteam", CreateNewCoreTeam)
 
 
 app.listen(5000, ()=>{
