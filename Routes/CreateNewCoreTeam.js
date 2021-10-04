@@ -44,12 +44,13 @@ module.exports=function CreateNewCoreTeam(req, res){
                     }]
                 });
                 await teamMembers.save();
-
+                res.send("Team Created")
             }else{
                 console.log("Lead And Team Exist");
+                res.send("Team already exists check data")
             }
         }
     });
     
-    res.send(req.body);
+    // res.send(req.body);
 }
