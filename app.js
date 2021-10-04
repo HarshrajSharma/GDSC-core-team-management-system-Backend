@@ -14,6 +14,7 @@ const Home=require("./Routes/Home")
 const CreateUserFormData=require("./Routes/CreateUserFormData");
 const CoreUser = require("./Routes/CoreUser");
 const CreateNewCoreTeam = require("./Routes/CreateNewCoreTeam");
+const CoreTeam=require("./Routes/CoreTeam");
 
 /*==========================================</Routes>======================================================== */
 
@@ -43,9 +44,9 @@ mongoose.connect(process.env.DB, {
 
 app.get("/", Home);
 app.post("/createuser", CreateUserFormData);
-app.get("/coreuser", CoreUser)
-app.post("/createnewcoreteam", CreateNewCoreTeam)
-
+app.get("/coreuser", CoreUser);
+app.post("/createnewcoreteam", CreateNewCoreTeam);
+app.get("/coreteam", CoreTeam);
 
 app.listen(5000, ()=>{
     console.log("Server started at port: 5000")

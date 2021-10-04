@@ -6,7 +6,7 @@ module.exports=function CoreUser(req, res){
         if(err){
             console.log(err)
         }else{
-            console.log(user);
+            // console.log(user)
             console.log("I logged")
             res.send(user);
         }
