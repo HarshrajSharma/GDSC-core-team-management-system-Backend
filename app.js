@@ -15,6 +15,7 @@ const CreateUserFormData=require("./Routes/CreateUserFormData");
 const CoreUser = require("./Routes/CoreUser");
 const CreateNewCoreTeam = require("./Routes/CreateNewCoreTeam");
 const CoreTeam=require("./Routes/CoreTeam");
+const AddMembersToTeam=require("./Routes/AddMembersToTeam")
 
 /*==========================================</Routes>======================================================== */
 
@@ -47,6 +48,7 @@ app.post("/createuser", CreateUserFormData);
 app.get("/coreuser", CoreUser);
 app.post("/createnewcoreteam", CreateNewCoreTeam);
 app.get("/coreteam", CoreTeam);
+app.post("/addmemberstoteam", AddMembersToTeam);
 
 app.listen(5000, ()=>{
     console.log("Server started at port: 5000")

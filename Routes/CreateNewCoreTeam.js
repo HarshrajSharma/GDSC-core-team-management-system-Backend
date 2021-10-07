@@ -12,7 +12,7 @@ const teamSchema= new mongoose.Schema({
 
     year: Number,
     members : [{
-        name:String,
+        name: String,
         role: String
     }]
 
