@@ -13,6 +13,11 @@ const teamSchema= new mongoose.Schema({
     year: Number,
     members : [{
         name: String,
+        department: String,
+        batch: Number,
+        image: String,
+        linkedIn: String,
+        github: String,
         role: String
     }]
 
