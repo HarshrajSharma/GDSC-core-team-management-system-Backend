@@ -2,7 +2,7 @@ const mongoose=require("mongoose")
 const leadSchema=new mongoose.Schema({
 
     year: Number,
-    lead: String
+    leadName: String
 });
 
 
@@ -44,8 +44,14 @@ module.exports=function CreateNewCoreTeam(req, res){
                 const teamMembers= new TeamMembers({
                     year: req.body.year,
                     members: [{
-                        name: req.body.lead,
-                        role: "GDSC Lead"
+                        name: req.body.leadName,
+                        role: "GDSC Lead",
+                        department: req.body.department,
+                        batch: req.body.batch,
+                        linkedIn: req.body.linkedIn,
+                        github: req.body.github,
+                        image: req.body.image
+
                     }]
                 });
                 await teamMembers.save();
