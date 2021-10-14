@@ -50,7 +50,7 @@ module.exports=function CreateNewCoreTeam(req, res){
                         batch: req.body.batch,
                         linkedIn: req.body.linkedIn,
                         github: req.body.github,
-                        image: req.body.image
+                        image: `${process.env.SERVER}/profile/${req.file.filename}`
 
                     }]
                 });
