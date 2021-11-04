@@ -52,7 +52,7 @@ const storage= multer.diskStorage({
         cb(null, "./CoreMembers/images");
     },
     filename: (req, file, cb)=>{
-        // console.log(file);
+        // console.log(file)
         cb(null, Date.now() + path.extname(file.originalname));
     }
 });
